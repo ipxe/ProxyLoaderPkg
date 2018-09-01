@@ -1,0 +1,27 @@
+## @file
+#  UEFI loader protocol proxy
+#
+#  This UEFI application calls an entry point provided by a proxy
+#  loader protocol installed on the image handle.
+#
+#  Copyright (C) 2018 Michael Brown <mbrown@fensystems.co.uk>.
+#
+#  This program and the accompanying materials are licensed and made
+#  available under the terms and conditions of the BSD License which
+#  accompanies this distribution. The full text of the license may be
+#  found at http://opensource.org/licenses/bsd-license.php
+#
+#  THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS"
+#  BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER
+#  EXPRESS OR IMPLIED.
+#
+##
+
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = ProxyLoaderPkg
+  PACKAGE_GUID                   = DBF844DF-CD7C-444E-85A4-653365293A66
+  PACKAGE_VERSION                = 1.0
+
+[Protocols]
+  gProxyLoaderProtocolGuid	= {0x6766FF22, 0xE98C, 0x47D2, {0x9B, 0x7A, 0xD3, 0x27, 0x73, 0xD9, 0x80, 0xBB}}
