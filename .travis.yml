@@ -18,6 +18,12 @@ addons:
   apt:
     packages:
       - nasm
+  coverity_scan:
+    project:
+      name: "ipxe/ProxyLoaderPkg"
+      version: $TRAVIS_COMMIT
+    build_command: "build -a X64 -t GCC5 -p ProxyLoaderPkg/ProxyLoaderPkg.dsc"
+    branch_pattern: coverity_scan
 
 install:
   - git clone --depth 1 --branch ${EDK2_VERSION} ${EDK2_URL}
