@@ -1,7 +1,7 @@
 # UEFI loader protocol proxy
 
-[![Build Status](https://travis-ci.org/ipxe/ProxyLoaderPkg.svg?branch=master)](https://travis-ci.org/ipxe/ProxyLoaderPkg)
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/16649/badge.svg)](https://scan.coverity.com/projects/ipxe-proxyloaderpkg)
+[![Build](https://img.shields.io/github/workflow/status/ipxe/ProxyLoaderPkg/Build)](https://github.com/ipxe/ProxyLoaderPkg/actions?query=workflow%3ABuild+branch%3Amaster)
+[![Coverity](https://img.shields.io/coverity/scan/16649)](https://scan.coverity.com/projects/ipxe-ProxyLoaderPkg)
 
 This is a small UEFI application that allows trusted code to create a
 valid `EFI_LOADED_IMAGE_PROTOCOL` instance that can be used to
