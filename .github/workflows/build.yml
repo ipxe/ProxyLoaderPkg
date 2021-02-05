@@ -1,0 +1,35 @@
+name: Build
+
+on: push
+
+env:
+  EDK2_URL: https://github.com/tianocore/edk2.git
+  EDK2_VERSION: vUDK2018
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install packages
+        run: |
+          sudo apt update
+          sudo apt install -y -o Acquire::Retries=50 \
+                           nasm uuid-dev
+
+      - name: Download EDK2
+        run: |
+          git clone --depth 1 --branch ${EDK2_VERSION} ${EDK2_URL}
+          ln -s .. edk2/ProxyLoaderPkg
+          make -C edk2/BaseTools/Source/C
+
+      - name: Build
+        working-directory: edk2
+        run: |
+          . edksetup.sh
+          build -a X64 -t GCC5 -p ProxyLoaderPkg/ProxyLoaderPkg.dsc
