@@ -2,6 +2,7 @@
 
 [![Build](https://img.shields.io/github/workflow/status/ipxe/ProxyLoaderPkg/Build)](https://github.com/ipxe/ProxyLoaderPkg/actions?query=workflow%3ABuild+branch%3Amaster)
 [![Coverity](https://img.shields.io/coverity/scan/16649)](https://scan.coverity.com/projects/ipxe-ProxyLoaderPkg)
+[![Release](https://img.shields.io/github/v/release/ipxe/ProxyLoaderPkg)](https://github.com/ipxe/ProxyLoaderPkg/releases/latest)
 
 This is a small UEFI application that allows trusted code to create a
 valid `EFI_LOADED_IMAGE_PROTOCOL` instance that can be used to
