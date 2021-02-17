@@ -8,10 +8,18 @@ This is a small UEFI application that allows trusted code to create a
 valid `EFI_LOADED_IMAGE_PROTOCOL` instance that can be used to
 transfer control to an arbitrary trusted entry point.
 
-## Prerequisites
+## Prebuilt binary
 
-You need a working [EDK II](https://github.com/tianocore/edk2) build
-environment.
+You can download the latest prebuilt
+[ProxyLoader.efi](https://github.com/ipxe/ProxyLoaderPkg/releases/latest/download/ProxyLoader.efi)
+binary, which is signed for UEFI Secure Boot.
+
+## Building from source
+
+### Prerequisites
+
+To build from source, you will need a working [EDK
+II](https://github.com/tianocore/edk2) build environment.
 
 On Linux, you can create a working EDK II build environment with the
 following commands:
@@ -22,7 +30,7 @@ following commands:
     make -C BaseTools/Source/C
     cd ..
 
-## Building
+### Building
 
 Clone this repository within your existing EDK II build environment,
 then build the `ProxyLoaderPkg` package.
